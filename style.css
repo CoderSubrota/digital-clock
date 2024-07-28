@@ -1,0 +1,147 @@
+body {
+  background-color: black;
+  height: 100vh;
+  width: 100%;
+  color: white;
+  font-family: "Edu AU VIC WA NT Hand", cursive;
+}
+.digitalClockDiv{
+    margin: auto;
+    /* margin-left: 20px; */
+    width: 80%;
+    margin-top: 28px;
+    display: grid;
+    grid-template-columns: repeat(4,2fr);
+    gap: 55px;
+   visibility: hidden;
+}
+
+.hoursDiv{
+    height: 210px;
+    width: 210px;
+    box-shadow: inset 2px 3px 2px 3px rgba(0, 0, 255, 0.56),
+    4px 6px 4px 6px rgba(14, 178, 187, 0.56),
+    4px 8px 4px 8px rgba(127, 20, 194, 0.56);
+    border-radius: 50%;
+}
+
+.miniutesDiv{
+    height: 210px;
+    width: 210px;
+    box-shadow: inset 2px 3px 2px 3px rgba(12, 205, 12, 0.56),
+    4px 6px 4px 6px rgba(14, 178, 187, 0.56),
+    4px 8px 4px 8px rgba(127, 20, 194, 0.56);
+    border-radius: 50%;
+}
+
+
+.secondsDiv{
+    height: 210px;
+    width: 210px;
+    box-shadow: inset 2px 3px 2px 3px rgba(12, 198, 167, 0.56),
+    4px 6px 4px 6px rgba(14, 178, 187, 0.56),
+    4px 8px 4px 8px rgba(127, 20, 194, 0.56);
+    border-radius: 50%;
+}
+
+.timeStatus{
+    height: 80px;
+    width: 120px;
+    border-radius: 25px;
+    border-top: 10px solid rgba(9, 119, 183, 0.5);
+    border-bottom: 10px solid rgba(19, 206, 122, 0.5);
+    color: white;
+    margin-top: 54px;
+    padding: 14px;
+    text-align: center;
+}
+
+.showHours,.showMinutes,.showSeocnds{
+    font-size: 65px;
+    text-align: center;
+    font-weight: bold;
+    padding-top:-4px;
+    color: rgba(232, 236, 232, 0.942);
+}
+
+.showTimeStatus > p {
+    color: rgb(33, 217, 204);
+    font-size: 65px;
+    font-weight: bold;
+    margin-top: -7px;
+}
+
+
+#message{
+    margin: 80px 0px;
+    font-size: 55px;
+    text-align: center;
+}
+#loading{
+    visibility: visible;
+    font-size: 29px;
+    text-align: center;
+    color: white;
+    height: 40px;
+    width: 40px;
+    border-top: 4px solid blue;
+    border-bottom: 4px solid rgb(218, 14, 123);
+    border-left:4px solid  cyan;
+    border-right: 4px solid yellow ;
+    border-radius: 50%;
+    margin-top: 54px;
+    margin:auto;
+    animation: loading 2s linear infinite;
+}
+
+.secondDott{
+    height: 28px;
+    width: 28px;
+    background-color: rebeccapurple;
+    border-radius: 50%;
+}
+
+
+@keyframes loading {
+     0%{
+        transform: rotate(0deg);
+     }100%{
+        transform: rotate(360deg);
+     }
+}
+.showMessage{
+    visibility: hidden;
+}
+@media (max-width:1200px) {
+    .digitalClockDiv{
+        display: grid;
+        grid-template-columns: repeat(4,2fr);
+    }
+}
+
+
+@media (max-width:1000px) {
+    .digitalClockDiv{
+        display: grid;
+        grid-template-columns: repeat(3,2fr);
+        margin: auto;
+    }
+}
+
+
+@media (max-width:800px) {
+    .digitalClockDiv{
+        display: grid;
+        grid-template-columns: repeat(2,2fr);
+        margin: auto;
+    }
+}
+
+
+@media (max-width:600px) {
+    .digitalClockDiv{
+        display: grid;
+        grid-template-columns: repeat(1,2fr);
+        margin: auto;
+    }
+}
